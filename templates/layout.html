@@ -1,0 +1,23 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    <title>{% block title %}{% endblock %} | Future Scout</title>
+</head>
+<body>
+    <nav class="p-3 fixed w-full flex flex-wrap items-center justify-between bg-black z-10">
+        <h1 class="text-xl font-extrabold">FUTURE SCOUT</h1>
+        <div class="flex flex-wrap items-center gap-10 text-xl [&>a]:bg-neutral-800 [&>a]:p-2 [&>a]:rounded-lg">
+            <a href="/">Home</a>
+            <a href="/">Chat</a>
+            <a href="/">Articles</a>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

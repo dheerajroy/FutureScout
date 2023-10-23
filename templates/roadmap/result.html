@@ -1,0 +1,60 @@
+{% extends "../layout.html" %}
+
+{% block title %}{{ result.current_level }}{% endblock %}
+
+{% block content %}
+    <div class="bg-black absolute top-1/4 left-1/2 -translate-x-1/2 w-5/6 flex flex-col gap-5 p-5 drop-shadow-[0_0px_10px_rgba(0,0,0,0.5)] rounded-t-3xl">
+        <h1 class="text-5xl font-extrabold">{{ result.current_level }}</h1>
+        <p>{{ result.description }}</p>
+        <h1 class="text-3xl font-bold">Exams</h1>
+        <div class="cards-container">
+            {% for exam in result.exams.all %}
+                <div class="card">
+                    <div>
+                        <h2>{{ exam.name }}</h2>
+                        <p>{{ exam.description }}</p>
+                    </div>
+                    <a href="{{ exam.link }}" target="_blank"><button>Visit</button></a>
+                </div>
+            {% endfor %}
+        </div>
+        <h1 class="text-3xl font-bold">Courses</h1>
+        <div class="cards-container">
+            {% for course in result.courses.all %}
+                <div class="card">
+                    <div>
+                        <h2>{{ course.title }}</h2>
+                        <p>{{ course.description }}</p>
+                        <p>
+                            {% if course.online %}
+                                <b>Online</b>
+                            {% else %}
+                                <b>Offline</b>
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if course.free %}
+                                <b>Free</b>
+                            {% else %}
+                                <b>Paid</b>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <a href="{{ course.link }}" target="_blank"><button>Visit</button></a>
+                </div>
+            {% endfor %}
+        </div>
+        <h1 class="text-3xl font-bold">Education Establishments</h1>
+        <div class="cards-container">
+            {% for edu in result.educationEstablishments.all %}
+            <div class="card">
+                <div>
+                    <h2>{{ edu.name }}</h2>
+                    <p>{{ edu.description }}</p>
+                </div>
+                <a href="{{ edu.link }}" target="_blank"><button>Visit</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

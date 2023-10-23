@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    outline: none;
+    @apply text-neutral-100;
+}
+
+body {
+    /* @apply min-h-screen bg-gradient-to-b from-rose-500 to-black bg-fixed; */
+    @apply min-h-screen bg-white bg-fixed;
+}
+
+.search-container {
+    @apply min-h-screen flex flex-col gap-5 justify-center items-center;
+}
+
+.search-container select {
+    @apply bg-black rounded-l-full p-4;
+}
+
+input, select, textarea, button {
+    @apply text-lg border-0;
+}
+
+.cards-container {
+    @apply flex flex-wrap gap-5;
+}
+
+.card {
+    @apply w-80 h-60 flex flex-col justify-between gap-3 p-3 rounded-xl border-4 border-rose-500;
+}
+
+.card h2 {
+    @apply text-2xl font-bold;
+}
+
+.card a button {
+    @apply bg-neutral-100 text-black p-2 rounded-sm;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-rose-300;
+}
