@@ -8,8 +8,8 @@
 }
 
 body {
-    /* @apply min-h-screen bg-gradient-to-b from-rose-500 to-black bg-fixed; */
-    @apply min-h-screen bg-white bg-fixed;
+    @apply min-h-screen bg-gradient-to-b from-rose-500 to-black bg-fixed;
+    /* @apply min-h-screen bg-white bg-fixed; */
 }
 
 .search-container {

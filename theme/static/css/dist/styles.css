@@ -922,11 +922,14 @@ select {
 }
 
 body {
-  /* @apply min-h-screen bg-gradient-to-b from-rose-500 to-black bg-fixed; */
   min-height: 100vh;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #f43f5e var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(244 63 94 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #000 var(--tw-gradient-to-position);
   background-attachment: fixed;
+  /* @apply min-h-screen bg-white bg-fixed; */
 }
 
 .search-container {
