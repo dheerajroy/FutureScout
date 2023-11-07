@@ -5,7 +5,7 @@
 
 {% block content %}
     <div class="search-container">
-        <img class="w-80 md:w-96 mix-blend-multiply" src="{% static 'images/logo.png' %}" alt="Future Scout">
+        <img class="w-80 md:w-96 mix-blend-multiply" src="{% static 'images/logo-nobg.png' %}" alt="Future Scout">
         <form class="flex items-stretch [&>select]:w-[80vw] [&>select]:max-w-lg drop-shadow-2xl rounded-full" method="post">
             {% csrf_token %}
             {{ form.current_level }}
