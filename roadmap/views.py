@@ -1,7 +1,8 @@
 from django.views.generic import FormView, DetailView
 from django.urls import reverse
-from .models import RoadMap
+from .models import Course, RoadMap
 from .forms import SearchForm
+from django.shortcuts import render
 
 
 class SearchView(FormView):
@@ -19,3 +20,7 @@ class ResultView(DetailView):
 
     def get_object(self, queryset=None):
         return RoadMap.objects.get(slug=self.kwargs.get('current_level'))
+    
+
+def home_view(request):
+    return render(request,'pages/home.html',{})
