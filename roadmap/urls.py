@@ -5,6 +5,7 @@ app_name = 'roadmap'
 
 urlpatterns = [
     path('home/',views.home_view, name='home'),
+    
     path('', SearchView.as_view(), name='search'),
     path('<slug:current_level>/', ResultView.as_view(), name='result'),
     path('10th/', ResultView.as_view(), name='10th'),
