@@ -10,9 +10,10 @@
    
 </head>
 <body>
+    
     <nav class="p-3 fixed w-full flex flex-wrap items-center justify-between bg-black z-10 ">
         <h1 class="text-xl font-extrabold">FUTURE SCOUT</h1>
-        <div class="flex flex-wrap items-center gap-10 text-xl [&>a]:bg-neutral-800 [&>a]:p-2 [&>a]:rounded-lg [&>a]:bg-neutral-800:hover my-6 my-0">   
+        <div class="flex flex-wrap items-center gap-10 text-xl [&>a]:bg-neutral-800 [&>a]:p-2 [&>a]:rounded-lg [&>a]:bg-neutral-800:hover my-6 my-0 ">   
             
             <a href="{% url 'roadmap:10th' %}">10th</a>
             <a href="{% url 'roadmap:12th' %}">12th</a>
@@ -20,12 +21,12 @@
             <a href="{% url 'roadmap:ug' %}">UG students</a>
             <a href="{% url 'roadmap:pg' %}">PG students</a>
             <a href="{% url 'roadmap:phd' %}">phd students</a>
-            <a href="{% url 'roadmap:search' %}">Search</a>
-            <a href="/">Home</a>
+            <a href="{% url 'roadmap:home' %}">Home</a>
             <a href="/">Chat</a>
             <a href="/">Articles</a>
         </div>   
     </nav> 
+   
     {% block content %}
     {% endblock %}
     

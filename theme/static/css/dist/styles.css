@@ -927,6 +927,13 @@ select {
   padding: 1.25rem;
 }
 
+.ps {
+  padding-top: -0.75rem;
+  padding-left: 65rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -1099,5 +1106,23 @@ button {
 }
 
 .\[\&\>a\]\:bg-neutral-800>a:hover {
-  background-color: #DF365F;
+  background-color: #f43f5e var(--tw-gradient-from-position);
+
+}
+
+.search-button {
+  padding: 1.5rem;
+}
+
+.bg-cover {
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
 }
